@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='site.css')}}"/>
+    </head>
+    <body>
+        {%if name %}
+            <span class="message">Hello there {{name}}</span> It's {{date.strftime("%A, %d, %B, %Y at %X")}}.
+            <br/>Do you want to look at the picture? Type "api/image" in the link instead of "hello/..."
+        {% else %}
+            <span class="message">What's your name? Provide it after the /hello/ link above</span>
+        {% endif %}
+    </body>
+</html>
